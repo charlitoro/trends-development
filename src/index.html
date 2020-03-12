@@ -4,32 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activity 001</title>
+
+    <link rel="stylesheet" type="" href="css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
+  <header class="navbar navbar-expand navbar-dark flex-colum flex-md-row bd-navbar">
+    <a>Home</a>
+  </header>
   <div>
-    <h1>Internet, Technology  and Basic Concepts</h1>
+    <h2>Internet, Technology  and Basic Concepts</h2>
+    <div class="content">
+      <h4>Content</h4>
+      <ol>
+        <li> <a rel="stylesheet" href="#protocol-stack">Protocol Stack</a></li>
+        <li> <a rel="stylesheet" href="#dns">Domain Names and Address Resolution (DNS)</a> </li>
+        <li>
+          <a rel="stylesheet" href="#http-request">HTTP Request</a>
+          <ol>
+            <li><a rel="stylesheet" href="#request-method">Request method</li>
+          </ol>
+        </li>
+        <li> <a rel="stylesheet" href="#client-server">Client/Server Architecture</a> </li>
+      </ol>
+    </div>
+    <p>The Internet's growth has become explosive and it seems impossible to escape the bombardment 
+      of www.com's seen constantly on television, heard on radio, and seen in magazines. Because the 
+      Internet has become such a large part of our lives, a good understanding is needed to use this 
+      new tool most effectively.
+    </p>
+    <p>Because the Internet is a global network of computers each computer connected to the Internet 
+        must have a unique address. Internet addresses are in the form nnn.nnn.nnn.nnn where nnn must 
+        be a number from 0 - 255. This address is known as an IP address. (IP stands for Internet 
+        Protocol; more on this later.) 
+    </p>
+    <p>
+      If you connect to the Internet through an Internet Service Provider (ISP), you are usually assigned 
+      a temporary IP address for the duration of your dial-in session. If you connect to the Internet 
+      from a local area network (LAN) your computer might have a permanent IP address or it might obtain 
+      a temporary one from a DHCP (Dynamic Host Configuration Protocol) server. In any case, if you are 
+      connected to the Internet, your computer has a unique IP address. 
+    </p>
 
     <div>
-      <h2>Client/Server Architecture</h2>
+      <h3 id="protocol-stack">Protocol Stack</h3>
+      <p>
+        Every computer needs one to communicate on the Internet and it is usually built into the computer's 
+        operating system (i.e. Windows, Unix, etc.). The protocol stack used on the Internet is refered to 
+        as the TCP/IP protocol stack because of the two major communication protocols used. The TCP/IP stack 
+        looks like this: 
+      </p>
+      <table class="table">
+        <thead>
+          <th scope="col"> Protocol Layer</th>
+          <th scope="col"> Comments </th>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"> Application Protocols Layer </th>
+            <td> Protocols specific to applications such as WWW, e-mail, FTP, etc. </td>
+          </tr>
+          <tr>
+            <th scope="row"> Transmission Control Protocol Layer (TCP/IP) </th>
+            <td> TCP directs packets to a specific application on a computer using a port number. </td>
+          </tr>
+          <tr>
+            <th scope="row"> User Datagram Protocol (UDP) </th>
+            <td> UDP uses the Internet Protocol to get a datagram (data unit) from one computer to another </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        TCP and UDP are part of the TCP/IP protocol suite, which includes a number of 
+        protocols for carrying out network communications.
+      </p>
     </div>
-      
+
     <div>
-      <h2>TCP/IP and UDP Protocols</h2>
+      <h3 id="dns"> Domain Names and Address Resolution (DNS)</h3>
+      <p style="font-weight: bold; font-family: cursive; font-size: x-large;">
+        172.78.5.21 --> www.domine.com
+      </p>
+      <p>
+        The DNS is a distributed database which keeps track of computer's names and their 
+        corresponding IP addresses on the Internet. Many computers connected to the Internet host part of 
+        the DNS database and the software that allows others to access it. These computers are known as DNS 
+        servers. No DNS server contains the entire database; they only contain a subset of it. If a DNS 
+        server does not contain the domain name requested by another computer, the DNS server re-directs 
+        the requesting computer to another DNS server.
+      </p>
     </div>
-      
+
     <div>
-      <h2>Request and Response</h2>
-      <h3>POST, GET</h3>
+      <h3 id="http-request">HTTP Request</h4>
+      <h4 id="request-method">Request method</h4>
     </div>
-      
+
     <div>
-      <h2>Service WEB</h2>
+      <h3 id="clien-server">Client/Server Architecture</h3>
+      <img style="height: 30%; width: 30%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Client-server-model.svg/1200px-Client-server-model.svg.png" alt="Client-Server"> <br>
+      <p>
+        Client-server architecture is an architecture of a computer network in which many clients (remote processors) 
+        request and receive service from a centralized server (host computer). Client computers provide an interface 
+        to allow a computer user to request services of the server and to display the results the server returns. 
+        Servers wait for requests to arrive from clients and then respond to them. Ideally, a server provides a 
+        standardized transparent interface to clients so that clients need not be aware of the specifics of the 
+        system (i.e., the hardware and software) that is providing the service.
+      </p>
     </div>
     
-    <div>
-      <h2>Compilation and Interpretation</h2>
-    </div>
-
   </div>
 </body>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
 </html>
