@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-  <header class="navbar navbar-expand navbar-dark flex-colum flex-md-row bd-navbar">
+  <!-- <header class="navbar navbar-expand navbar-dark flex-colum flex-md-row bd-navbar">
     <a>Home</a>
-  </header>
+  </header> -->
   <div>
     <h2>Internet, Technology  and Basic Concepts</h2>
     <div class="content">
       <h4>Content</h4>
       <ol>
-        <li> <a rel="stylesheet" href="#protocol-stack">Protocol Stack</a></li>
         <li> <a rel="stylesheet" href="#dns">Domain Names and Address Resolution (DNS)</a> </li>
+        <li> <a rel="stylesheet" href="#protocol-stack">Protocol Stack</a></li>
         <li>
           <a rel="stylesheet" href="#http-request">HTTP Request</a>
           <ol>
@@ -26,6 +26,17 @@
           </ol>
         </li>
         <li> <a rel="stylesheet" href="#client-server">Client/Server Architecture</a> </li>
+        <li> 
+          <a rel="stylesheet" href="#software-trends">Software Development Trends</a>
+          <ol>
+            <li><a rel="stylesheet" href="#backend">Backend Development</a></li>
+            <li><a rel="stylesheet" href="#frontend">Frontend Development</a></li>
+            <li><a href="#ai">Artificial Intelligence (AI)</a></li>
+            <li><a href="#blockchain">Blockchain</a></li>
+            <li><a href="iot">IoT</a></li>
+          </ol>
+        </li>
+        <li><a href="#references">References</a></li>
       </ol>
     </div>
     <p>The Internet's growth has become explosive and it seems impossible to escape the bombardment 
@@ -45,6 +56,21 @@
       a temporary one from a DHCP (Dynamic Host Configuration Protocol) server. In any case, if you are 
       connected to the Internet, your computer has a unique IP address. 
     </p>
+
+    <div>
+      <h3 id="dns"> Domain Names and Address Resolution (DNS)</h3>
+      <p style="font-weight: bold; font-family: cursive; font-size: x-large;">
+        172.78.5.21 --> www.domine.com
+      </p>
+      <p>
+        The DNS is a distributed database which keeps track of computer's names and their 
+        corresponding IP addresses on the Internet. Many computers connected to the Internet host part of 
+        the DNS database and the software that allows others to access it. These computers are known as DNS 
+        servers. No DNS server contains the entire database; they only contain a subset of it. If a DNS 
+        server does not contain the domain name requested by another computer, the DNS server re-directs 
+        the requesting computer to another DNS server.
+      </p>
+    </div>
 
     <div>
       <h3 id="protocol-stack">Protocol Stack</h3>
@@ -81,23 +107,37 @@
     </div>
 
     <div>
-      <h3 id="dns"> Domain Names and Address Resolution (DNS)</h3>
-      <p style="font-weight: bold; font-family: cursive; font-size: x-large;">
-        172.78.5.21 --> www.domine.com
-      </p>
-      <p>
-        The DNS is a distributed database which keeps track of computer's names and their 
-        corresponding IP addresses on the Internet. Many computers connected to the Internet host part of 
-        the DNS database and the software that allows others to access it. These computers are known as DNS 
-        servers. No DNS server contains the entire database; they only contain a subset of it. If a DNS 
-        server does not contain the domain name requested by another computer, the DNS server re-directs 
-        the requesting computer to another DNS server.
-      </p>
-    </div>
-
-    <div>
-      <h3 id="http-request">HTTP Request</h4>
+      <h3 id="http-request">HTTP Request</h3>
+      <p>HTTP stands for Hypertext Transfer Protocol and is used to structure requests and responses over 
+        the internet. HTTP requires data to be transferred from one point to another over the network. </p>
       <h4 id="request-method">Request method</h4>
+      <p> A request message from a client to a server includes, within the first line of that message, 
+        the method to be applied to the resource, the identifier of the resource, and the protocol version 
+        in use. </p>
+      <ul>
+        <li><p><strong>GET: </strong> GET is used to request data from a specified resource. 
+          GET is one of the most common HTTP methods. Note that the query string (name/value pairs) is 
+          sent in the URL of a GET request:</p>
+          <mark>/test/demo_form.php?name1=value1&name2=value2 </mark>
+        </li>
+        <br>
+        <li>
+          <p><strong>POST: </strong>POST is used to send data to a server to create/update a resource. 
+            The data sent to the server with POST is stored in the request body of the HTTP request:</p>
+          <mark>
+            POST /test/demo_form.php HTTP/1.1 <br>
+            Host: w3schools.com <br>
+            name1=value1&name2=value2
+          </mark> <br>
+          <p>POST is one of the most common HTTP methods. </p>
+        </li>
+        <li>
+          <p><strong>PUT: </strong> PUT is used to send data to a server to create/update a resource.
+            The difference between POST and PUT is that PUT requests are idempotent. That is, calling the 
+            same PUT request multiple times will always produce the same result. In contrast, calling a 
+            POST request repeatedly have side effects of creating the same resource multiple times.</p>
+        </li>
+      </ul>
     </div>
 
     <div>
@@ -113,6 +153,142 @@
       </p>
     </div>
     
+  </div>
+  <div>
+    <h3 id="software-trends">Software Development Trends</h3>
+    <div>
+      <h4 id="backend">Backend Development</h4>
+      <p>
+        From AI to Cloud, there are as many software development trends predictions as there are people. 
+        The diversity and complexity of the IT world make compiling an exhaustive forecast nearly impossible
+      </p>
+      <ul>
+        <li>
+          <p><b>#1 Python:</b> Let us start with Python: a high-level dynamically typed programming 
+            language that has been gaining momentum in the IT world for quite a while. Conceived and 
+            first implemented around 30 years ago, it is the most loved and the third best-known 
+            programming language in the contemporary developer community according to the CodinGame 
+            2020 Developer Survey. 
+          </p>
+          <img src="https://cdn.merixstudio.com/media/uploads/2020/01/24/most-loved-programming-languages-2020.png" alt="trends-python">
+        </li>
+        <br>
+        <li>
+          <p>
+            <b>#2 Golang: </b> The second suggestion for backend development in 2020 is a statically typed, 
+            compiling programming language: Go, also known as Golang. Released in 2009, it has been named 
+            the Programming Language of the Year by TIOBE twice so far and – while it’s surely less popular 
+            than the above-mentioned Python – it’s been mentioned as the most loved technology by 68% of 
+            Stack Overflow survey’s respondents last year. 
+          </p>
+          <img src="https://cdn.merixstudio.com/media/uploads/2020/01/24/tiobe-index-for-go.png" alt="trends-go">
+        </li>
+        <br>
+        <li>
+          <p>
+            <b>#3 Node.js: </b> Let’s start from the very beginning, namely the fact that Node.js is a 
+            JavaScript-based solution. Therefore, using it for backend development in 2020 allows you to 
+            enjoy all the benefits of this high-level programming language, the most important of which 
+            is its immense popularity.
+          </p>
+          <img src="https://cdn.merixstudio.com/media/uploads/2020/01/24/most-popular-technologies.png" alt="trends-nodejs"> 
+        </li>
+        <br>
+      </ul>
+    </div>
+    <div>
+      <h4 id="frontend">Fontend Development</h4>
+      <p>When you are not on top of every new technology or tool being released, you can quickly lose pace. 
+        The web development industry is constantly changing, and as a developer you should always be ready 
+        to continue learning, or you’ll risk falling behind your competitors.
+      </p>
+      <ul>
+        <li>
+          <p><b>React: </b><br>
+            <img style="height: 10%; width: 10%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png" alt="react"><br>
+            React is the front-end framework created and developed by Facebook. The team was interested in 
+            obtaining high performance by building an effective UI. Jordan Walke proposed to create the 
+            library based on XHP and JavaScript combination in 2011. As a result, they received the library 
+            to build the web interface with JavaScript where the news update happens at the same time while 
+            customers use the chat. Facebook released the open-source JavaScript tool in 2013. They 
+            continued the framework development and released React Native for Android and iOS in 2015. 
+          </p>
+        </li>
+        <li>
+          <p>
+            <b>Vue: </b><br>
+            <img style="height: 30%; width: 30%;" src="https://i.imgur.com/scrcyJ3.png" alt="vue">
+            <br>
+            Vue.js is the web framework for building user interfaces. It is an independent tool that creates 
+            web interfaces and doesn’t require the additional extension. Vue.js was created by Evan You and 
+            initially released in February 2014. Probably you might not find the long list of big companies 
+            using Vue.js but it is definitely popular among developers and the framework popularity considerably increases. 
+          </p>
+        </li>
+        <li>
+          <p>
+            <b>Angular: </b><br>
+            <img style="height: 10%; width: 10%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png" alt="angular">
+            <br>
+            Angular or Angular v2 or Angular 2+ is a complete rewrite of AngularJS by the same team in Google 
+            who developed the original front-end framework in 2010. It was released in September of 2016 as a 
+            completely new framework with new logic and features to address the challenges of web development 
+            as we know it today. Even the naming called a hot discussion in the development community, and it 
+            is needless to say that the complete absence of backward compatibility with AngularJS caused a huge 
+            controversy. Those who trusted Google and Angular community weren’t able to just upgrade their 
+            application to the new Google front-end framework version to get all the new trendy dev tools and 
+            features. The app should be rewritten from scratch with Angular. 
+          </p>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h4 id="ai">Artificial Intelligence (AI)</h4>
+      <p>
+        It’s a buzzword that gets thrown around a lot, but it’s not because artificial intelligence (AI) 
+        is being overhyped — it’s because modern technology is finally powerful enough to make AI tools a 
+        reality. Whether it’s through deep learning, machine learning or broader artificially intelligent 
+        applications, organizations are depending on AI to fundamentally transform their industries.
+      </p>
+    </div>
+    <div>
+      <h4 id="blockchain">Blockchain</h4>
+      <p>
+        Bitcoin may have kicked its own cryptocurrency revolution, but its underlying software — blockchain — 
+        is poised to have an even greater effect on the future of development. The beauty of blockchain is 
+        its decentralized nature: It can store any type of record in a public-facing database that’s nearly 
+        impossible for a hacker to alter or corrupt.
+      </p>
+    </div>
+    <div>
+      <h4 id="iot">IoT</h4>
+      <p>
+        The internet of things (IoT) has finally begun to emerge all around us. From Bluetooth trackers to 
+        smart microwaves, internet-connected devices are no longer relegated to computers and cell phones. 
+        As technologies like 5G begin to roll out, more devices can take advantage of better wireless 
+        bandwidth and power efficiency, bringing to life new and exciting possibilities for the future of IoT.
+      </p>
+    </div>
+  </div>
+  <div>
+    <h2 id="references">References</h2>
+    <ul>
+      <li>
+        3 top picks for backend development in 2020. <a href="https://www.merixstudio.com/blog/backend-development/">Here</a>
+      </li>
+      <li>
+        6 Front-End Development Trends to Get You Ready for 2020. <a href="https://www.april9.com.au/blog/6-front-end-development-trends-to-get-you-ready-for-2020">Here</a>
+      </li>
+      <li>
+        7 Evolving Trends in Software Development. <a href="https://www.ciklum.com/blog/7-evolving-trends-in-software-development/">Here</a>
+      </li>
+      <li>
+        HTTP Requests. <a href="https://www.codecademy.com/articles/http-requests">Here</a>
+      </li>
+      <li>
+        HTTP Request Methods. <a href="https://www.w3schools.com/tags/ref_httpmethods.asp">Here</a>
+      </li>
+    </ul>
   </div>
 </body>
 
