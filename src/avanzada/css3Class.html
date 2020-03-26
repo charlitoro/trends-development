@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 page</title>
+    <!-- importacion de estilos desde un archivo css -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- importacion de estilos desde la etiqueta style -->
+    <style>
+        h1, h2 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: turquoise;
+        }
+        strong {
+            color: teal;
+        }
+    </style>
+</head>
+<body style="background-color: #28292A;">
+    <h1>Conceptos Basicos de CSS3</h1>
+    <ol style="color: ghostwhite;">
+        <li>Selectores</li>
+        <li>Importación de estilos</li>
+    </ol>
+    <div>
+        <p>
+            <strong>Style Sheet (CSS)</strong> o Holas de Estilo en Cascada en su traducción al español, 
+            al igual que HTML es un lenguaje de marcado que nos permite aplicar estilos dentro 
+            dentro de nuestras etiquetas HTML.
+        </p>
+        <p>
+            Es común encontrar la analogía con vehículo con un diseño antiguo y uno con diseño moderno, 
+            donde el auto viejo es el HTML simple pero cuando se le aplica estilos CSS ya tenemos un auto 
+            que a simple vista pareciera nuevo. 
+        </p>
+    </div>
+    
+    <div>
+        <h2>Selectores</h2>
+        <p>Un selector es la forma en como nosotros le decimos a las etiquetas que estilos deben tomar. 
+            Existen varios selectores:
+        </p>
+        <ul>
+            <li>
+                <p> 
+                    <strong>Selector de tipo:</strong> Es el tipo más utilizado donde se refiere siempre
+                    a una determinada etiqueta HTML.
+                </p>
+                <pre class="pre-text">
+                    h1 {
+                        color: #000033;
+                    }
+
+                    /* Es posible utilizar más etiquetas */
+                    h1, h2, h3 {
+                        color: #000033;
+                    }
+                </pre>
+            </li>
+            <li>
+                <p>
+                    <strong>Selector de clase:</strong> En ocasiones a un estilo definido para una etiqueta 
+                    se le necesita añadir algunos estilos adicionales es una sola sección de tu página. Para 
+                    darle solucion a esto estan las clases, donde solo se debe añadir el nombre de la clase
+                    después de el nombre de la etiqueta, separados por un punto:
+                </p>
+                <pre class="pre-text">
+                    h2.rojo-negrita {
+                        color: #330000;
+                        font-weight: bold;
+                    }
+
+                    /* */
+                    .rojo-negrita {
+                        color: #330000;
+                        font-weight: bold;
+                    }
+                </pre>
+            </li>
+            <li>
+                <p>
+                    <strong>Selector de ID:</strong> Los selectores ID le permiten asignar nombres significativos  
+                    a elementos HTML concretos. Los selectores ID se utilizan para un solo elemento:
+                </p> 
+                <pre class="pre-text">
+                    h1#verde-negrita {
+                        color: #003300;
+                    }
+
+                    /* */
+                    #verde-negrita {
+                        color: #003300
+                    }
+                </pre>
+            </li>
+            <li>
+                <p>
+                    <strong>Selector universal: </strong> Sirve para seleccionar, con ayuda del comodín *, 
+                    cada elemento del árbol de documento.
+                </p> 
+                <pre class="pre-text">
+                    * {
+                        margin: 0;
+                        padding: 0;
+                    }
+                </pre>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>Importación de estilos</h2>
+        <p>Para poder importar y utilizar nuestros estilos sobre las etiquetas HTML se lo puede hacer 
+            principalmente de 3 maneras:
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <strong>Directamente en la etiqueta:</strong> En cada etiqueta podemos utilizar 
+                    la palabra <mark>style=""</mark> y dentro de las comillas pueden ir los estilos: 
+                </p>
+                <pre class="pre-text">
+                    &lt;header style="background-color: darkviolet;">
+                    &lt;/header>
+                </pre>
+            </li>
+            <li>
+                <p>
+                    <strong>Etiqueta  &lt;Style>:</strong> La etiqueta <mark>&lt;style></mark> que se
+                    comunmente de ubica dentro del &lt;head> en la estructura HTML, puede guardar los 
+                    estilos CSS:
+                </p>
+                <pre class="pre-text">
+                    &lt;style>
+                        h1 {
+                            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                            color: darkslategray;
+                        }
+                        strong {
+                            color: teal;
+                        }
+                    &lt;/style>
+                </pre>
+            </li>
+            <li>
+                <p>
+                    <strong>Desde un archivo .css:</strong> Esta es la manera que se aconseja utilizar 
+                    porque nos permite tener un proyecto organizado sin cargar mucho nuestras paginas HTML.
+                    Dentro de un archivo.css puedes guardar tus estilos e importalos con la etiqueta &lt;link>
+                </p>
+                <pre class="pre-text">
+                    &lt;link rel="stylesheet" href="css/styles.css">
+                </pre>
+                <p>
+                    El parámetro <mark>href</mark> es donde guardas la direccion donde se encuentra tu archivo .css.
+                </p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
