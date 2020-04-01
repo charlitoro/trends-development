@@ -4,94 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculum Vitae</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
 </head>
 <body>
     <h1>Curriculum Vitae Registration</h1>
-    <div>
-        <hr>
-        <h2>Personal information</h2>
-        <img src="https://pbs.twimg.com/profile_images/421277055863377921/xfYTaCMI_400x400.jpeg" alt="Lenny">
-        
-        <br><br>
-        
-        <label>Name:</label>
-        <input type="text">
-
-        <label>Lastname:</label>
-        <input type="text">
-
-        <br><br>
-
-        <label for="personal-phone">Phone#: </label>
-        <input type="text">
-
-        <label for="email">Email: </label>
-        <input type="email" id="email">
-
-        <br><br>
-
-        <label for="age">Age:</label>
-        <input type="number" >
-
-        <br><br>
-
-        <label for="gender">Gender:</label> <br>
-        <label>Male<input type="radio" value="male"></label>
-        <label>Femile<input type="radio" value="femile"></label>
-        <label>Other<input type="radio" value="other"></label>
-    </div>
-    <div>
-        <hr>
-        <h2>Education Background</h2>
-
-        <label for="degree">Degree Name: </label>
-        <input type="text">
-
-        <label for="institude">Institute: </label>
-        <input type="text">
-
-        <br><br>
-
-        <label for="degree-date">Date:</label>
-        <input type="date">
-
-        <br><br>
-
-        <label for="profile">Professional Profile: </label> <br>
-        <textarea cols="50" rows="5"></textarea>
-
-        <br><br>
-        <div align="center">
-            <button class="green" type="submit">Add Degree</button>
+    <form name="personalForm" id="personalForm" action="">
+        <div>
+            <h2>Personal information</h2>
+            <img src="https://pbs.twimg.com/profile_images/421277055863377921/xfYTaCMI_400x400.jpeg" alt="Lenny">
+            
+            <br><br>
+            
+            <label>Name:</label>
+            <input type="text" name="personalName" id="personalName">
+    
+            <label>Lastname:</label>
+            <input type="text" name="personalLastname" id="personalLastname">
+    
+            <br><br>
+    
+            <label for="personal-phone">Phone#: </label>
+            <input type="text" name="personalPhone" id="personalPhone">
+    
+            <label for="email">Email: </label>
+            <input type="email" name="personalEmail" id="personalEmail">
+    
+            <br><br>
+    
+            <label for="age">Age:</label>
+            <input type="number" name="personalAge" id="personalAge">
+    
+            <br><br>
+    
+            <label for="gender">Gender:</label> <br>
+            <label>Male<input type="radio" name="personalGender" id="genderMale" value="male"></label>
+            <label>Femile<input type="radio" name="personalGender" id="genderFemile" value="femile"></label>
+            <label>Other<input type="radio" name="personalGender" id="genderOther" value="other"></label>
         </div>
+    </form>
 
-    </div>
-    <div>
-        <hr>
-        <h2>Work Experience</h2>
-        <label for="company">Company or Institution: </label>
-        <input type="text">
-
-        <label for="position">Position: </label>
-        <input type="text">
-
-        <br><br>
-
-        <label for="work-phone">Phone: </label>
-        <input type="text" id="phone">
-
-        <label for="medical-address">Address:</label>
-        <input type="text" name="medial-address">
-
-        <div align="center">
-            <button class="green" type="submit">Add Work</button>
+    <form name="educationForm" id="educationForm" action="">
+        <div>
+            <h2>Education Background</h2>
+    
+            <label for="degree">Degree Name: </label>
+            <input type="text" name="educationDegree" id="educationDegree">
+    
+            <label for="institude">Institute: </label>
+            <input type="text" name="educationInstitute" id="educationInstitute">
+    
+            <br><br>
+    
+            <label for="degree-date">Date:</label>
+            <input type="date" name="educationDate" id="educationDate">
+    
+            <br><br>
+    
+            <label for="profile">Professional Profile: </label> <br>
+            <textarea cols="50" rows="5" name="educationProfile" id="educationProfile"></textarea>
+    
+            <br><br>
+            <div align="center">
+                <input class="green" type="button" value="Add" name="" id="" onclick="onClickAddEducation()">
+            </div>
+    
         </div>
-    </div>
+    </form>
+
+    <form name="workForm" id="workForm" action="">
+        <div>
+            <h2>Work Experience</h2>
+            <label for="company">Company or Institution: </label>
+            <input type="text" name="workCompany" id="workCompany">
+    
+            <label for="position">Position: </label>
+            <input type="text" name="workPosition" id="workPosition">
+    
+            <br><br>
+    
+            <label for="work-phone">Phone: </label>
+            <input type="text" name="workPhone" id="workPhone">
+    
+            <label for="work-address">Address:</label>
+            <input type="text" name="workAddress" id="workAddress">
+    
+            <div align="center">
+                <input class="green" type="button" value="Add" name="" id="" onclick="onClickAddWork()">
+            </div>
+        </div>
+    </form>
+   
     <br>
     <div align="center">
-        <button class="green" type="submit">Register</button>
-        <button class="red" type="reset">Cancel</button>
+        <input class="green" type="button" name="" id="" onclick="onClickSummary()" value="Register">
+        <input class="red" type="button" name="" id="" onclick="onClickCancel()" value="Cancel">
+    </div> 
+    <!-- Summary dynamic area -->
+    <div id="summary">
+        <h2>Anything</h2>
     </div>
 </body>
+<script src="src/main.js"></script>
 </html>

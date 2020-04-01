@@ -53,7 +53,7 @@ input {
     border: 2px solid teal;
 }
 
-button.green {
+.green {
     background-color:green;
     border: none;
     color: white;
@@ -64,7 +64,7 @@ button.green {
     font-size: 16px;
   }
 
-  button.red {
+  .red {
     background-color: orangered;
     border: none;
     color: white;
