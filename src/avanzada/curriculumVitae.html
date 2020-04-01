@@ -8,91 +8,85 @@
 </head>
 <body>
     <h1>Curriculum Vitae Registration</h1>
-    <form name="personalForm" id="personalForm" action="">
-        <div>
-            <h2>Personal information</h2>
-            <img src="https://pbs.twimg.com/profile_images/421277055863377921/xfYTaCMI_400x400.jpeg" alt="Lenny">
-            
-            <br><br>
-            
-            <label>Name:</label>
-            <input type="text" name="personalName" id="personalName">
-    
-            <label>Lastname:</label>
-            <input type="text" name="personalLastname" id="personalLastname">
-    
-            <br><br>
-    
-            <label for="personal-phone">Phone#: </label>
-            <input type="text" name="personalPhone" id="personalPhone">
-    
-            <label for="email">Email: </label>
-            <input type="email" name="personalEmail" id="personalEmail">
-    
-            <br><br>
-    
-            <label for="age">Age:</label>
-            <input type="number" name="personalAge" id="personalAge">
-    
-            <br><br>
-    
-            <label for="gender">Gender:</label> <br>
-            <label>Male<input type="radio" name="personalGender" id="genderMale" value="male"></label>
-            <label>Femile<input type="radio" name="personalGender" id="genderFemile" value="femile"></label>
-            <label>Other<input type="radio" name="personalGender" id="genderOther" value="other"></label>
-        </div>
-    </form>
+    <div>
+        <h2>Personal information</h2>
+        <img src="https://pbs.twimg.com/profile_images/421277055863377921/xfYTaCMI_400x400.jpeg" alt="Lenny">
+        
+        <br><br>
+        
+        <label>Name:</label>
+        <input type="text" name="personalName" id="personalName">
 
-    <form name="educationForm" id="educationForm" action="">
-        <div>
-            <h2>Education Background</h2>
-    
-            <label for="degree">Degree Name: </label>
-            <input type="text" name="educationDegree" id="educationDegree">
-    
-            <label for="institude">Institute: </label>
-            <input type="text" name="educationInstitute" id="educationInstitute">
-    
-            <br><br>
-    
-            <label for="degree-date">Date:</label>
-            <input type="date" name="educationDate" id="educationDate">
-    
-            <br><br>
-    
-            <label for="profile">Professional Profile: </label> <br>
-            <textarea cols="50" rows="5" name="educationProfile" id="educationProfile"></textarea>
-    
-            <br><br>
-            <div align="center">
-                <input class="green" type="button" value="Add" name="" id="" onclick="onClickAddEducation()">
-            </div>
-    
-        </div>
-    </form>
+        <label>Lastname:</label>
+        <input type="text" name="personalLastname" id="personalLastname">
 
-    <form name="workForm" id="workForm" action="">
-        <div>
-            <h2>Work Experience</h2>
-            <label for="company">Company or Institution: </label>
-            <input type="text" name="workCompany" id="workCompany">
-    
-            <label for="position">Position: </label>
-            <input type="text" name="workPosition" id="workPosition">
-    
-            <br><br>
-    
-            <label for="work-phone">Phone: </label>
-            <input type="text" name="workPhone" id="workPhone">
-    
-            <label for="work-address">Address:</label>
-            <input type="text" name="workAddress" id="workAddress">
-    
-            <div align="center">
-                <input class="green" type="button" value="Add" name="" id="" onclick="onClickAddWork()">
-            </div>
+        <br><br>
+
+        <label for="personal-phone">Phone#: </label>
+        <input type="text" name="personalPhone" id="personalPhone">
+
+        <label for="email">Email: </label>
+        <input type="email" name="personalEmail" id="personalEmail">
+
+        <br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" name="personalAge" id="personalAge">
+
+        <br><br>
+
+        <label for="gender">Gender:</label> <br>
+        <label>Male<input type="radio" name="personalGender" id="genderMale" value="male"></label>
+        <label>Femile<input type="radio" name="personalGender" id="genderFemile" value="femile"></label>
+        <label>Other<input type="radio" name="personalGender" id="genderOther" value="other"></label>
+    </div>
+
+    <div>
+        <h2>Education Background</h2>
+
+        <label for="degree">Degree Name: </label>
+        <input type="text" name="educationDegree" id="educationDegree">
+
+        <label for="institude">Institute: </label>
+        <input type="text" name="educationInstitute" id="educationInstitute">
+
+        <br><br>
+
+        <label for="degree-date">Date:</label>
+        <input type="date" name="educationDate" id="educationDate">
+
+        <br><br>
+
+        <label for="profile">Professional Profile: </label> <br>
+        <textarea cols="50" rows="5" name="educationProfile" id="educationProfile"></textarea>
+
+        <br><br>
+        <div align="center">
+            <input class="green" type="button" value="Add" name="" id="" onclick="onClickAddEducation()">
         </div>
-    </form>
+
+    </div>
+
+    <div>
+        <h2>Work Experience</h2>
+        <label for="company">Company or Institution: </label>
+        <input type="text" name="workCompany" id="workCompany">
+
+        <label for="position">Position: </label>
+        <input type="text" name="workPosition" id="workPosition">
+
+        <br><br>
+
+        <label for="work-phone">Phone: </label>
+        <input type="text" name="workPhone" id="workPhone">
+
+        <label for="work-address">Address:</label>
+        <input type="text" name="workAddress" id="workAddress">
+
+        <div align="center">
+            <input class="green" type="button" value="Add" name="" id="" onclick="onClickAddWork()">
+        </div>
+    </div>
    
     <br>
     <div align="center">
@@ -101,7 +95,18 @@
     </div> 
     <!-- Summary dynamic area -->
     <div id="summary">
-        <h2>Anything</h2>
+        <h2>Summary</h2>
+        <p>In this page you could be register a Curriculum Vitae to apply to a work</p>
+        <p>¿How to complete the form?:</p>
+        <ul>
+            <li>The Name and Lastname are required, if your press the Register button the 
+                system will be validate this fields</li>
+            <li>The Degree Name and Institute are required, if your press the Add button in 
+                education section, the system will be validate this fields and add a new Degree</li>
+            <li>The Company Name and Position are required, if your press the Add button in 
+                work section, the system will be validate this fields and add a new Company Work</li>
+            <li>If all are done, when you press the Register button in the summary you will be see your information</li>
+        </ul>
     </div>
 </body>
 <script src="src/main.js"></script>
