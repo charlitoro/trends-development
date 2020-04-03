@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COVID-19</title>
+    <link rel="stylesheet" href="css/covid.css" type="text/css">
 </head>
 <body>
     <header></header>
@@ -29,12 +30,13 @@
             <li>Lavarse las manos con jabon cada que se tenga contacto con cualquier superficie</li>
             <li>Utilizar tapabocas si presentas algún síntoma y llamar a las autoridades de salud</li>
         </ul>
-
+    </div>
+        
+    <div style="text-align: center;">
         <p>
             Si Presentas uno de los síntomas mencionados llena el formulario y nos pondremos 
             inmediatamente en contacto para realizar las pruebas pertinentes: 
         </p>
-        
         <label>Nombres:</label>
         <input type="text">
 
@@ -71,12 +73,11 @@
         <label for="sintomas">Síntomas presentes:</label>
         <br>
         <textarea name="txt" cols="30" rows="10"></textarea>
+        <div>
+            <button class="green" type="submit">Register</button>
+            <button class="red" type="reset">Cancel</button>
+        </div>
     </div>
-    
-    <br>
-    <div align="center">
-        <button type="submit">Register</button>
-        <button type="reset">Cancel</button>
-    </div>
+       
 </body>
 </html>
